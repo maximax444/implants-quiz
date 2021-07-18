@@ -17,9 +17,7 @@
 
 
 .btn--accent{
-    overflow: hidden;
-    position: relative;
-    &:after{
+    &:before{
         content: "";
         top: -50%;
         right: -50%;

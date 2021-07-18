@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // подсказки
     d.querySelectorAll(".quiz__info").forEach((btn, btnIndex) => {
         btn.addEventListener("click", event => {
+            console.log(btn);
             event.preventDefault();
+            event.stopPropagation();
         });
     });
     // Quiz

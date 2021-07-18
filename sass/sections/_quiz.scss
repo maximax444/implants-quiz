@@ -1,12 +1,16 @@
 .quiz {
   padding-top: 0;
 }
-
+.quiz-all {
+  border: 2px solid #3796F3;
+  border-radius: 8px;
+}
 .quiz-top {
-  background: #E6F7FF;
+  
   border-radius: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   padding: 20px;
+  position: relative;
   &__title {
     font-size: 20px;
     line-height: 27px;
@@ -19,6 +23,15 @@
     color: #4F4F4F;
     margin-bottom: 15px;
   }
+  &::after {
+    content: "";
+    width: calc(100%  - 40px);
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    height: 1px;
+    background-color: #E0E0E0;
+  }
 }
   
 
@@ -26,7 +39,7 @@
 .quiz-box__motion{
   width: 100%;
   height: 20px;
-  background-color: #fff;
+  background: #E6F7FF;
   border-radius: 100px;
 }
   
@@ -83,7 +96,6 @@
 }
   
 .quiz-box {
-  border: 2px solid #F2F2F2;
   border-radius: 12px;
 }
 .quiz__fieldset{
@@ -109,7 +121,7 @@
 .quiz-prize {
   background: #E6F7FF url('../img/front-page/quiz/quiz-prize-mob.png') center bottom no-repeat;
   border-radius: 12px;
-  margin-bottom: 20px;
+  margin-top: 20px;
   padding: 15px;
   padding-bottom: 95px;
   font-size: 14px;
@@ -301,6 +313,15 @@
   &:hover {
     .quiz__info-text {
       display: block;
+      z-index: 3;
     }
+  }
+}
+.quiz-prize_last {
+  text-align: center;
+}
+@media(min-width:768px) {
+  .quiz-top {
+    background: #E6F7FF;
   }
 }
