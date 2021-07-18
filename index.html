@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+	<meta charset="utf-8">
+	<title>Project name</title>
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Описание проекта">
+	<link rel="icon" href="./img/favicon.ico">
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/aos.css">
+
+	<!-- Кастомые анимации -->
+	<link rel="stylesheet" href="./css/animation.css">
+	<!-- / Кастомые анимации -->
+
+	<link rel="stylesheet" href="./css/lightgallery.min.css">
+	<link rel="stylesheet" href="./css/front.min.css">
+</head>
+
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header__wrap">
+				<!-- Логотип -->
+				<div class="header__logo">
+					<a class="header__logo-img" href="#">
+						<img src="./img/logo.svg" alt="Logo">
+					</a>
+					<p class="header__logo-descr">Центр дентальной имплантации и протезирования №1</p>
+				</div>
+
+				<!-- Адрес -->
+				<div class="header__address">
+					<div class="header__address-img">
+						<img src="img/address.svg" alt="">
+					</div>
+					<div class="header__address-text">
+						<span>г. Москва</span>
+						ул. Талалихина, 2/1, стр. 7
+					</div>
+				</div>
+
+				<!-- Элемент контактов -->
+				<div class="header__contacts header__contacts--pc">
+					<span itemprop="telephone">
+						<a class="header__contacts-phone" href="tel:+79999999999" rel="nofollow">+7 (999) 999-99-99</a>
+					</span>
+					<div class="header__contacts-now">Сейчас работаем</div>
+				</div>
+
+			</div>
+		</div>
+	</header>
+
+
+	<!-- Первый экран -->
+	<section class="first-screen">
+		<div class="container">
+			<div class="first-screen__wrap">
+				<h1 class="first-screen__title">Установка имплантов <br>
+					за 15 минут без боли <br class="mobbr"> и отёков <span><b>с пожизненной</b> <b>гарантией</b></span>
+				</h1>
+				<div class="first-screen__subtitle">
+					<img src="img/front-page/first-screen/euro.png" alt="">
+					<span>По европейской технологии “День в день”</span>
+				</div>
+				<div class="first-screen__features">
+					<div class="first-screen__features-block"><span>15 лет</span>Специализируемся <br> на имплантации
+						зубов
+					</div>
+					<div class="first-screen__features-block"><span>от 7 500 ₽</span>Стоимость импланта</div>
+				</div>
+				<div class="first-screen__bottom">
+					<div class="first-screen__prize">
+						<div class="first-screen__prize-title"><b>Получите подарок <br> от клиники</b> после расчета
+							стоимости на нашем сайте</div>
+						<div class="first-screen__prize-block"><img src="img/front-page/first-screen/prize1.png"
+								alt=""><span>Комплексная чистка зубов Airflow</span></div>
+						<div class="first-screen__prize-block"><img src="img/front-page/first-screen/prize2.png"
+								alt=""><span>Установка 2х пломб</span></div>
+					</div>
+					<div class="first-screen__price">
+						<p>Рассчитайте стоимость установки имплантов
+							<b>в 3-х ценовых категориях: <br> ”Доступный”, “Стандарт” <br class="mobbr"> и “Премиум”</b>
+						</p>
+						<a class="btn btn--full first-screen__price-btn" href="#quiz">Узнать стоимость</a>
+					</div>
+				</div>
+				<a class="first-screen__license" href="">
+					<img src="img/front-page/first-screen/license.svg" alt="">
+					<span>Смотреть наши лицензии</span>
+				</a>
+				<div class="first-screen__man">
+					<img src="img/front-page/first-screen/man.png" alt="">
+					<div class="first-screen__man-info"><span>Хирург имплантолог</span>Кандидант медицинских наук</div>
+					<div class="first-screen__man-installment"><span>0%</span></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- Секция с квизом -->
+	<section class="quiz" id="quiz">
+		<div class="container">
+			<div class="quiz-top">
+				<h2 class="quiz-top__title">Рассчитайте стоимость установки имплантов</h2>
+				<div class="quiz-top__subtitle">в 3-х ценовых категориях: <br> “Доступный”, ”Стандарт” <br> и “Премиум”
+				</div>
+				<!-- Счетчик вопросов -->
+				<div class="quiz-box__question">Шаг <span id="question-number">1</span> из <span
+						id="question-number-count">6</span></div>
+
+				<!-- Процентная полоса -->
+				<div class="quiz-box__motion">
+					<div class="quiz-box__motion-line"></div>
+				</div>
+			</div>
+
+
+
+
+			<div class="quiz-box">
+
+				<form action="send.php" class="quiz" method="POST">
+
+					<!-- Вопрос 1 -->
+					<fieldset class="quiz__fieldset active">
+						<div class="quiz-prize">
+							До результата теста <br>
+							и выбора подарка <br> осталось:
+							<b><span>5</span> вопросов</b>
+						</div>
+						<div class="quiz-main">
+							<h3 class="quiz__title">
+								<div class="quiz__title-num">1</div>
+								<div class="quiz__title-text"><span>На какой челюсти хотите поставить
+										импланты?</span>Выберите один или несколько вариантов</div>
+							</h3>
+							<div class="quiz-wrap quiz-wrap2">
+								<label>
+									<input class="quiz-wrapper-input" type="checkbox" name="На верхней челюсти"
+										value="Да">
+									<div class="quiz-wrap2__img"><img src="img/front-page/quiz/quiz1-1.png" alt="">
+									</div>
+									<div class="quiz-wrap2__text">На верхней челюсти</div>
+								</label>
+
+								<label>
+									<input class="quiz-wrapper-input" type="checkbox" name="На нижней челюсти"
+										value="Да">
+									<div class="quiz-wrap2__img"><img src="img/front-page/quiz/quiz1-2.png" alt="">
+									</div>
+									<div class="quiz-wrap2__text">На нижней челюсти</div>
+								</label>
+
+								<label>
+									<input class="quiz-wrapper-input" type="radio" name="Консультация" value="Да">
+									<div class="quiz-wrap2__img"><img src="img/front-page/quiz/quiz1-3.png" alt="">
+									</div>
+									<div class="quiz-wrap2__text">Пока не знаю,
+										нужна консультация</div>
+								</label>
+							</div>
+							<div class="quiz__bottom">
+								<a href="" class="btn btn--full quiz__btn quiz__btn-next">Следующий шаг</a>
+							</div>
+							<a class="quiz-polit" href="">Политика конфиденциальности</a>
+						</div>
+					</fieldset>
+
+					<!-- Вопрос 2 -->
+					<fieldset class="quiz__fieldset">
+						<div class="quiz-prize">
+							До результата теста <br>
+							и выбора подарка <br> осталось:
+							<b><span>4</span> вопросов</b>
+						</div>
+						<div class="quiz-main">
+							<h3 class="quiz__title">
+								<div class="quiz__title-num">2</div>
+								<div class="quiz__title-text"><span>Сколько зубов отсутствует?</span>Напишите
+									количество, шт.</div>
+							</h3>
+							<div class="quiz-wrap quiz-wrap1">
+								<div class="quiz-wrap1__img">
+									<img src="img/front-page/quiz/quiz1.png" alt="">
+								</div>
+								<div class="quiz-wrap1__main">
+
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Отсутствует зубов"
+											value="1-2">
+										<span></span>
+										1-2
+									</label>
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Отсутствует зубов"
+											value="3-5">
+										<span></span>
+										3-5
+									</label>
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Отсутствует зубов"
+											value="6-8">
+										<span></span>
+										6-8
+									</label>
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Отсутствует зубов"
+											value="На всей челюсти">
+										<span></span>
+										На всей челюсти
+									</label>
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Отсутствует зубов"
+											value="Не знаю, нужна консультация">
+										<span></span>
+										Не знаю, нужна консультация
+									</label>
+								</div>
+
+							</div>
+							<div class="quiz__bottom quiz__bottom-double">
+								<a href="" class="btn quiz__btn quiz__btn-prev"><img
+										src="img/front-page/quiz/quiz-prev.svg" alt=""></a>
+								<a href="" class="btn btn--full quiz__btn quiz__btn-next">Следующий шаг</a>
+							</div>
+							<a class="quiz-polit" href="">Политика конфиденциальности</a>
+						</div>
+					</fieldset>
+
+					<!-- Вопрос 3 -->
+					<fieldset class="quiz__fieldset">
+						<div class="quiz-prize">
+							До результата теста <br>
+							и выбора подарка <br> осталось:
+							<b><span>3</span> вопросов</b>
+						</div>
+						<div class="quiz-main">
+							<h3 class="quiz__title">
+								<div class="quiz__title-num">3</div>
+								<div class="quiz__title-text"><span>Как долго отсутствуют зубы?</span>От длительности
+									отсутствия зубов зависит выбор метода имплантации</div>
+							</h3>
+							<div class="quiz-wrap quiz-wrap1">
+								<div class="quiz-wrap1__img">
+									<img src="img/front-page/quiz/quiz2.png" alt="">
+								</div>
+								<div class="quiz-wrap1__main">
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Как долго"
+											value="Меньше 6 месяцев">
+										<span></span>
+										Меньше 6 месяцев
+									</label>
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Как долго"
+											value="От 6 месяцев до 2 лет">
+										<span></span>
+										От 6 месяцев до 2 лет
+									</label>
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Как долго"
+											value="От 2 до 5 лет">
+										<span></span>
+										От 2 до 5 лет
+									</label>
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Как долго"
+											value="Свыше 5 лет">
+										<span></span>
+										Свыше 5 лет
+									</label>
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Как долго"
+											value="Не знаю, нужна консультация">
+										<span></span>
+										Не знаю, нужна консультация
+									</label>
+								</div>
+
+							</div>
+							<div class="quiz__bottom quiz__bottom-double">
+								<a href="" class="btn quiz__btn quiz__btn-prev"><img
+										src="img/front-page/quiz/quiz-prev.svg" alt=""></a>
+								<a href="" class="btn btn--full quiz__btn quiz__btn-next">Следующий шаг</a>
+							</div>
+							<a class="quiz-polit" href="">Политика конфиденциальности</a>
+						</div>
+					</fieldset>
+
+					<!-- Вопрос 4 -->
+					<fieldset class="quiz__fieldset">
+						<div class="quiz-prize">
+							До результата теста <br>
+							и выбора подарка <br> осталось:
+							<b><span>2</span> вопросов</b>
+						</div>
+						<div class="quiz-main">
+							<h3 class="quiz__title">
+								<div class="quiz__title-num">4</div>
+								<div class="quiz__title-text"><span>Программы рассрочки и кредитования делают
+										имплантацию доступной</span>Выберите подходящий для вас вариант:</div>
+							</h3>
+							<div class="quiz-wrap quiz-wrap1">
+								<div class="quiz-wrap1__img">
+									<img src="img/front-page/quiz/quiz3.png" alt="">
+								</div>
+								<div class="quiz-wrap1__main">
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Оплата"
+											value="Готов(а) оплатить всю сумму сразу и получить дополнительную скидку">
+										<span></span>
+										<b>Готов(а) оплатить всю сумму сразу и получить дополнительную скидку</b>
+										<div class="quiz__info">
+											<div class="quiz__info-top">?</div>
+											<div class="quiz__info-text">При оплате всей суммы сразу предоставляем
+												скидку на все услуги</div>
+										</div>
+									</label>
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Оплата"
+											value="Нужна рассрочка">
+										<span></span>
+										Нужна рассрочка
+										<div class="quiz__info">
+											<div class="quiz__info-top">?</div>
+											<div class="quiz__info-text">При оплате всей суммы сразу предоставляем
+												скидку на все услуги</div>
+										</div>
+									</label>
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Оплата" value="В кредит">
+										<span></span>
+										В кредит
+									</label>
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Оплата"
+											value="Пока не знаю">
+										<span></span>
+										Пока не знаю
+									</label>
+								</div>
+
+							</div>
+							<div class="quiz__bottom quiz__bottom-double">
+								<a href="" class="btn quiz__btn quiz__btn-prev"><img
+										src="img/front-page/quiz/quiz-prev.svg" alt=""></a>
+								<a href="" class="btn btn--full quiz__btn quiz__btn-next">Следующий шаг</a>
+							</div>
+							<a class="quiz-polit" href="">Политика конфиденциальности</a>
+						</div>
+					</fieldset>
+
+					<!-- Вопрос 5 -->
+					<fieldset class="quiz__fieldset">
+						<div class="quiz-prize">
+							До результата теста <br>
+							и выбора подарка <br> осталось:
+							<b><span>1</span> вопросов</b>
+						</div>
+						<div class="quiz-main">
+							<h3 class="quiz__title">
+								<div class="quiz__title-num">5</div>
+								<div class="quiz__title-text"><span>Государство предоставляет налоговый вычет
+										13% от стоимости услуг по имплантации</span>В нашей клинике вы получите полный
+									пакет документов на налоговый вычет</div>
+							</h3>
+							<div class="quiz-wrap quiz-wrap1">
+								<div class="quiz-wrap1__img">
+									<img src="img/front-page/quiz/quiz4.png" alt="">
+								</div>
+								<div class="quiz-wrap1__main">
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Вычет"
+											value="Хочу получить вычет, нужна консультация">
+										<span></span>
+										<b>Хочу получить вычет, нужна консультация</b>
+										<div class="quiz__info">
+											<div class="quiz__info-top">?</div>
+											<div class="quiz__info-text">При оплате всей суммы сразу предоставляем
+												скидку на все услуги</div>
+										</div>
+									</label>
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Вычет"
+											value="Не интересует">
+										<span></span>
+										Не интересует
+									</label>
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Вычет" value="В кредит">
+										<span></span>
+										В кредит
+									</label>
+									<label>
+										<input class="quiz-wrapper-input" type="radio" name="Вычет"
+											value="Пока не знаю">
+										<span></span>
+										Пока не знаю
+									</label>
+								</div>
+
+							</div>
+							<div class="quiz__bottom quiz__bottom-double">
+								<a href="" class="btn quiz__btn quiz__btn-prev"><img
+										src="img/front-page/quiz/quiz-prev.svg" alt=""></a>
+								<a href="" class="btn btn--full quiz__btn quiz__btn-next">Следующий шаг</a>
+							</div>
+							<a class="quiz-polit" href="">Политика конфиденциальности</a>
+						</div>
+					</fieldset>
+
+					<!-- Вопрос 6 (завершающая форма) -->
+					<fieldset class="quiz__fieldset">
+						<h3 class="quiz__title">Заполните форму, чтобы получить результаты расчета</h3>
+						<p class="quiz__text">Специалист свяжется с вами и расскажет варианты и цены</p>
+						<div class="quiz-wrapper quiz-wrapper--submit">
+							<input class="quiz__input-tel" type="tel" name="quiz_user_phone" placeholder="Ваш телефон">
+							<button class="btn btn--full btn--accent quiz__btn" type="submit">Получить результаты
+								расчета</button>
+						</div>
+						<div class="quiz-policy">
+							<input class="quiz-policy__checkbox" type="checkbox" name="quiz_user_checkbox"
+								id="quiz-policy-checkbox" checked>
+							<label class="quiz-policy__label" for="quiz-policy-checkbox"><a
+									class="policy_conf btn--modal btn--modal-privacy" href="#">политика
+									конфиденциальности</a></label>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<!-- Модальное окно -->
+	<div class="modal">
+		<div class="modal-overlay"></div>
+
+		<div class="modal-window modal-window--order">
+			<h3 class="modal-window__title">Оставьте заявку</h3>
+			<p class="modal-window__descr">И мы перезвоним вам в течении 5 минут</p>
+			<form action="#" class="modal-window__form">
+				<input class="modal-window__form-input" type="text" name="name" placeholder="Имя">
+				<input class="modal-window__form-input" type="text" name="phone" placeholder="Телефон">
+				<button class="btn btn--accent btn--full btn--modal-form" type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
+			</form>
+		</div>
+
+		<div class="modal-window modal-window--privacy">
+			<h3 class="modal-window__title">Политика конфиденциальности</h3>
+			<p class="modal-window__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex ab voluptas
+				reprehenderit adipisci! Veniam ad impedit temporibus atque rem, amet fugiat voluptas pariatur
+				reprehenderit!</p>
+			<p class="modal-window__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex ab voluptas
+				reprehenderit adipisci! Veniam ad impedit temporibus atque rem, amet fugiat voluptas pariatur
+				reprehenderit!</p>
+			<p class="modal-window__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex ab voluptas
+				reprehenderit adipisci! Veniam ad impedit temporibus atque rem, amet fugiat voluptas pariatur
+				reprehenderit!</p>
+			<p class="modal-window__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex ab voluptas
+				reprehenderit adipisci! Veniam ad impedit temporibus atque rem, amet fugiat voluptas pariatur
+				reprehenderit!</p>
+			<p class="modal-window__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex ab voluptas
+				reprehenderit adipisci! Veniam ad impedit temporibus atque rem, amet fugiat voluptas pariatur
+				reprehenderit!</p>
+			<p class="modal-window__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex ab voluptas
+				reprehenderit adipisci! Veniam ad impedit temporibus atque rem, amet fugiat voluptas pariatur
+				reprehenderit!</p>
+			<p class="modal-window__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex ab voluptas
+				reprehenderit adipisci! Veniam ad impedit temporibus atque rem, amet fugiat voluptas pariatur
+				reprehenderit!</p>
+			<p class="modal-window__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex ab voluptas
+				reprehenderit adipisci! Veniam ad impedit temporibus atque rem, amet fugiat voluptas pariatur
+				reprehenderit!</p>
+			<p class="modal-window__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex ab voluptas
+				reprehenderit adipisci! Veniam ad impedit temporibus atque rem, amet fugiat voluptas pariatur
+				reprehenderit!</p>
+		</div>
+
+	</div>
+
+
+
+	<!-- Подключение скриптов -->
+	<script src="./js/swiper-bundle.min.js" defer></script>
+	<script src="./js/aos.js" defer></script>
+
+	<!-- lightgallery -->
+	<script src="./js/lightGallary/lightgallery.min.js" defer></script>
+	<script src="./js/lightGallary/lg-thumbnails.js" defer></script>
+	<script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js" defer></script>
+	<script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js" defer></script>
+	<script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js" defer></script>
+
+	<script src="./js/video.js" defer></script>
+	<script src="./js/quiz.js" defer></script>
+	<script src="./js/app.js" defer></script>
+
+</body>
+
+</html>
