@@ -1,11 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     var d = document;
 
+    // Снятие radio при выборе checkbox
+    d.querySelectorAll("input[type=checkbox]").forEach((btn, btnIndex) => {
+        btn.addEventListener("click", event => {
+            d.querySelector("input[type=radio]").checked = false;
+        });
+    });
 
     // подсказки
     d.querySelectorAll(".quiz__info").forEach((btn, btnIndex) => {
         btn.addEventListener("click", event => {
-            console.log(btn);
             event.preventDefault();
             event.stopPropagation();
         });
