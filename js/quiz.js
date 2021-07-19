@@ -46,14 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
         let m = 0;
 
         let intervalID = setInterval(function () {
-            if (m == 101) {
+            if (m == 99) {
                 clearInterval(intervalID);
             }
             m = m + 1;
             document.querySelector(".quiz-last__done-progres .inner b").innerHTML = m;
 
 
-        }, 49);
+        }, 40);
     }
     // Кнопка вперёд
     btnNext.forEach((btn, btnIndex) => {
