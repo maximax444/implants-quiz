@@ -124,7 +124,7 @@
   border: none;
   padding: 20px;
   border-radius: 8px;
-  transition: all 0.5s;
+  transition: all 0.9s;
   background-color: #fff;
   &.active{
     opacity: 1;
@@ -132,11 +132,11 @@
     bottom: 0;
     left: 0;
     z-index: 2;
-    overflow: hidden;
+    overflow: visible;
     height: auto;
     visibility: visible;
-    transition: all 0.5s;
-    transform: translateY(0%);
+    transition: all 0.9s;
+    transform: none;
     & + .quiz__fieldset {
       opacity: 1;
       position: absolute;
@@ -145,14 +145,52 @@
       left: 0;
       z-index: 1;
       height: auto;
-      overflow: hidden;
+      overflow: visible;
       visibility: visible;
       border: 2px solid #3796F3;
       border-radius: 8px;
-      transition: all 0.5s;
+      transition: all 0.9s;
       
     }
   }
+}
+.quiz-last__done-progres {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  border-radius: 50%;
+}
+.outer {
+  background-color: #03A9F4;
+  clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0, 50% 0, 50% 50%, 50% 50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.inner {
+  transform: scale(0.83);
+  background-color: #E6F7FF;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  color: #3796F3;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-last__done-progres.active .outer {
+  animation: xxx 5s linear forwards;
 }
 .quiz-prize {
   background: #E6F7FF url('../img/front-page/quiz/quiz-prize-mob.png') center bottom no-repeat;
@@ -413,6 +451,9 @@
   }
   input:checked + .quiz-wrap3__img {
     border: 2px solid #3796F3;
+    &::before {
+      background: linear-gradient(26.16deg, #3796F3 19.02%, #80BFFF 111.06%);
+    }
   }
   .quiz__info {
     display: none;
@@ -1269,8 +1310,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      img {
+      &-progres {
         margin-right: 0.78125vw;
+      }
+      img {
+        margin-right: 0;
       }
       span {
         font-size: 0.572916666667vw;
@@ -1661,5 +1705,8 @@
     height: 1.92708333333vw;
     width: 6.51041666667vw;
     height: 2.55208333333vw;
+    img {
+      width: 0.8333333333333334VW;
+    }
   }
 } 

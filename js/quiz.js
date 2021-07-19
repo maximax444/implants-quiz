@@ -42,6 +42,19 @@ document.addEventListener("DOMContentLoaded", function () {
             lineProcenter();
         });
     });
+    function counter(ms, className) {
+        let m = 0;
+
+        let intervalID = setInterval(function () {
+            if (m == 101) {
+                clearInterval(intervalID);
+            }
+            m = m + 1;
+            document.querySelector(".quiz-last__done-progres .inner b").innerHTML = m;
+
+
+        }, 49);
+    }
     // Кнопка вперёд
     btnNext.forEach((btn, btnIndex) => {
 
@@ -49,6 +62,15 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
             if (btnIndex == 5) {
                 d.querySelector(".quiz-top").classList.add('hide');
+                d.querySelector(".quiz-last__prize-wrap").innerHTML = d.querySelector(".quiz-main6 input:checked").nextElementSibling.querySelector('picture').innerHTML;
+                d.querySelector(".quiz-last__prize-text span").innerHTML = d.querySelector(".quiz-main6 input:checked").nextElementSibling.nextElementSibling.querySelector('.quiz-wrap3__name').innerHTML;
+                d.querySelector(".quiz-last__done-progres").classList.add('active');
+                counter(49, '.quiz-last__done-progres .inner b');
+                setTimeout(function () {
+                    d.querySelector(".quiz-last__done-progres .inner").innerHTML = '<img src="img/progres-ready.png" alt="">';
+                }, 5000);
+
+
             }
             quizQuestNumber.innerHTML = btnIndex + 2;
             quizFieldset[btnIndex].classList.remove('active');
@@ -56,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
             lineProcenter();
         });
     });
+
 
     function maskPhone(selector, masked = '+7 (___) ___-__-__') {
         const elems = document.querySelectorAll(selector);
@@ -107,6 +130,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 label.addEventListener("click", event => {
                     if (fieldsetIndex == 5) {
                         d.querySelector(".quiz-top").classList.add('hide');
+
+                        d.querySelector(".quiz-last__prize-wrap").innerHTML = d.querySelector(".quiz-main6 input:checked").nextElementSibling.querySelector('picture').innerHTML;
+                        d.querySelector(".quiz-last__prize-text span").innerHTML = d.querySelector(".quiz-main6 input:checked").nextElementSibling.nextElementSibling.querySelector('.quiz-wrap3__name').innerHTML;
+                        d.querySelector(".quiz-last__done-progres").classList.add('active');
+                        counter(49, '.quiz-last__done-progres .inner b');
+                        setTimeout(function () {
+                            d.querySelector(".quiz-last__done-progres .inner").innerHTML = '<img src="img/progres-ready.png" alt="">';
+                        }, 5000);
                     }
                     quizFieldset[fieldsetIndex].classList.remove('active');
 
