@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
             event.stopPropagation();
         });
     });
+    if (window.innerWidth >= 992) {
+        d.querySelectorAll(".quiz__btn-prev").forEach((btn, btnIndex) => {
+            btn.innerHTML = 'Назад';
+        });
+    }
     // Quiz
     var quizForm = d.querySelector(".quiz"),
         quizFieldset = quizForm.querySelectorAll("fieldset"),
@@ -34,9 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     // Кнопка вперёд
     btnNext.forEach((btn, btnIndex) => {
+
         btn.addEventListener("click", event => {
             event.preventDefault();
-
+            if (btnIndex == 5) {
+                d.querySelector(".quiz-top").classList.add('hide');
+            }
             quizQuestNumber.innerHTML = btnIndex + 2;
             quizFieldset[btnIndex].classList.remove('active');
             quizFieldset[btnIndex + 1].classList.add('active');
@@ -48,10 +56,14 @@ document.addEventListener("DOMContentLoaded", function () {
     quizFieldset.forEach((fieldset, fieldsetIndex) => {
         let fieldsetLabels = fieldset.querySelectorAll('label');
         quizCountQuest++;
-        fieldsetLabels.forEach((label) => {
-            if (label.querySelector('input[type=radio]')) {
-                label.addEventListener("click", event => {
 
+        fieldsetLabels.forEach((label) => {
+            if ((label.querySelector('input[type=radio]')) && (fieldsetIndex != 6)) {
+                console.log(fieldsetIndex);
+                label.addEventListener("click", event => {
+                    if (fieldsetIndex == 5) {
+                        d.querySelector(".quiz-top").classList.add('hide');
+                    }
                     quizFieldset[fieldsetIndex].classList.remove('active');
 
                     quizFieldset[fieldsetIndex + 1].classList.add('active');

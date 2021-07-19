@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
 	var d = document;
 
@@ -34,19 +34,19 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 		});
 	});
-	
+
 	// Скрытие мобильного меню и модалок
 
-	function findCloseBtns(){
+	function findCloseBtns() {
 		let closeBtns = document.querySelectorAll('.close');
-		
+
 		for (let i = 0; i < closeBtns.length; i++) {
 			setUpClose(closeBtns[i]);
 		}
 	}
 
 	function setUpClose(closeBtn) {
-		closeBtn.addEventListener('click', function(e){
+		closeBtn.addEventListener('click', function (e) {
 			e.preventDefault();
 			menuBurger.classList.remove('header__burger--active');
 			d.querySelector('.header__nav').classList.remove('header__nav--active');
@@ -54,33 +54,33 @@ document.addEventListener("DOMContentLoaded", function() {
 			d.querySelector('.modal').classList.remove('modal--active');
 		})
 	}
-	
+
 	findCloseBtns();
 
 
 
 	// Модальные окна скрипт открытия
-	function findBtnModal(){
+	function findBtnModal() {
 		let btnsModal = document.querySelectorAll('.btn--modal');
-		
+
 		for (let i = 0; i < btnsModal.length; i++) {
 			setUpBtnModal(btnsModal[i]);
 		}
 	}
 
 	function setUpBtnModal(btnModal) {
-		btnModal.addEventListener('click', function(e){
+		btnModal.addEventListener('click', function (e) {
 			e.preventDefault();
 			d.querySelector('.modal').classList.add('modal--active');
 			d.querySelector('body').classList.add('stop');
 		})
 	}
-	
+
 	findBtnModal();
 
 
 	// Вызов модалки с заказом
-	function findBtnModalOrder(){
+	function findBtnModalOrder() {
 		let btnsModal = document.querySelectorAll('.btn--modal-order');
 		for (let i = 0; i < btnsModal.length; i++) {
 			setUpBtnModalOrder(btnsModal[i]);
@@ -88,16 +88,16 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 	function setUpBtnModalOrder(btnModal) {
-		btnModal.addEventListener('click', function(e){
+		btnModal.addEventListener('click', function (e) {
 			e.preventDefault();
 			d.querySelector('.modal .modal-window--order').classList.add('modal-window--active');
 		})
 	}
-	
+
 	findBtnModalOrder();
 
 	// Вызов с политикой конфиденциальности
-	function findBtnModalPrivacy(){
+	function findBtnModalPrivacy() {
 		let btnsModal = document.querySelectorAll('.btn--modal-privacy');
 		for (let i = 0; i < btnsModal.length; i++) {
 			setUpBtnModalPrivacy(btnsModal[i]);
@@ -105,24 +105,24 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 	function setUpBtnModalPrivacy(btnModal) {
-		btnModal.addEventListener('click', function(e){
+		btnModal.addEventListener('click', function (e) {
 			e.preventDefault();
 			d.querySelector('.modal .modal-window--privacy').classList.add('modal-window--active');
 		})
 	}
-	
+
 	findBtnModalPrivacy();
 
 
 
 	// Скрытие модалки при клике на оверлей
-	d.querySelector('.modal-overlay').addEventListener('click', function(e){
+	d.querySelector('.modal-overlay').addEventListener('click', function (e) {
 		e.preventDefault();
 		d.querySelector('body').classList.remove('stop');
 		d.querySelector('.modal').classList.remove('modal--active');
 		d.querySelector('.modal-window--active').classList.remove('modal-window--active');
 	});
-	
+
 
 
 	// Ленивая загрузка изображений
@@ -139,21 +139,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// Куки
 	// function setCookie(c_name,value,exdays){
-    //     var exdate=new Date();
-    //        	exdate.setDate(exdate.getDate() + exdays);
-    //     var c_value = escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString()) + "; path=/";
-    //     document.cookie=c_name + "=" + c_value;
-   	// }
+	//     var exdate=new Date();
+	//        	exdate.setDate(exdate.getDate() + exdays);
+	//     var c_value = escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString()) + "; path=/";
+	//     document.cookie=c_name + "=" + c_value;
+	// }
 
-    // function getMyCookie(name) {
-    //     var c = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
-    //         if (c) return c[2];
-    //         else return "";
-    // }
+	// function getMyCookie(name) {
+	//     var c = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+	//         if (c) return c[2];
+	//         else return "";
+	// }
 
-  
 
-		
+
+
 
 	// Слайдер с контрольными точками
 	//   var swiper = new Swiper('.testimonials-swiper-container', {
@@ -186,14 +186,61 @@ document.addEventListener("DOMContentLoaded", function() {
 	// 	}
 	//   });
 
+	// Forms
+	function sendFormTo(form) {
+		let formData = new FormData(form);
+		let xhr = new XMLHttpRequest();
+		var th = form;
 
-	  // LightGallary (Плагин типо FacnyBox только без JQ)
-	  lightGallery(document.querySelector('.lightgallery'));
+
+		// Валидация
+		var novalidInputs = th.querySelectorAll('[novalid]');
+		for (let i = 0; i < novalidInputs.length; i++) {
+			novalidInputs[i].removeAttribute("novalid");
+		}
+
+		var novalidInputs = 0;
+		for (var key of formData.keys()) {
+			if (formData.get(key) == '' || formData.get(key) == null) {
+				if (key == 'phone') {
+					form.querySelector('input[name=' + key + ']').setAttribute("novalid", "true");
+					novalidInputs++
+				}
+			}
+		}
+
+		if (novalidInputs > 0) {
+			return false;
+		}
+
+		xhr.open("POST", "../mail.php");
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState == 4) {
+				if (xhr.status == 200) {
+					form.reset();
+					d.querySelector('body').classList.remove('stop');
+					d.querySelector('.modal').classList.remove('modal--active');
+					d.querySelector('.modal-window--active').classList.remove('modal-window--active');
+				}
+			}
+		};
+		xhr.send(formData);
+	}
+
+
+	document.querySelectorAll('form').forEach(link => {
+		link.addEventListener('submit', function (e) {
+			e.preventDefault();
+			sendFormTo(this);
+		});
+	});
+	// LightGallary (Плагин типо FacnyBox только без JQ)
+	lightGallery(document.querySelector('.lightgallery'));
 
 
 
 
-	  // FAQ
+	// FAQ
 	//   function findFaq(){
 	// 		let faqBoxes = document.querySelectorAll('.faq-box')
 
@@ -218,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// 	}
 	// 	findFaq();
 
-		// Инициализациия AOS анимаций
-		// AOS.init();
+	// Инициализациия AOS анимаций
+	// AOS.init();
 
 });
