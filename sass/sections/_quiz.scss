@@ -587,6 +587,10 @@
       line-height: 15px;
       color: #000000;
       max-width: 176px;
+      display: none;
+      &.active {
+        display: block;
+      }
     }
   }
   &__bottom {

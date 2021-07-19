@@ -50,7 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 clearInterval(intervalID);
             }
             m = m + 1;
-            document.querySelector(".quiz-last__done-progres .inner b").innerHTML = m;
+            if (document.querySelector(".quiz-last__done-progres .inner b")) {
+                document.querySelector(".quiz-last__done-progres .inner b").innerHTML = m;
+            }
+
 
 
         }, 40);
@@ -69,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     counter(49, '.quiz-last__done-progres .inner b');
                     setTimeout(function () {
                         d.querySelector(".quiz-last__done-progres .inner").innerHTML = '<img src="img/progres-ready.png" alt="">';
+                        d.querySelector(".quiz-last__done span").classList.add('active');
                     }, 5000);
                     setTimeout(function () {
                         d.querySelector(".quiz-last__img").classList.add('active');
@@ -109,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const template = masked,
                 def = template.replace(/\D/g, ""),
                 val = this.value.replace(/\D/g, "");
-            console.log(template);
+
             let i = 0,
                 newValue = template.replace(/[_\d]/g, function (a) {
                     return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
@@ -147,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         fieldsetLabels.forEach((label) => {
             if ((label.querySelector('input[type=radio]')) && (fieldsetIndex != 6)) {
-                console.log(fieldsetIndex);
+
                 label.addEventListener("click", event => {
                     setTimeout(function () {
                         if (fieldsetIndex == 5) {
@@ -159,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             counter(49, '.quiz-last__done-progres .inner b');
                             setTimeout(function () {
                                 d.querySelector(".quiz-last__done-progres .inner").innerHTML = '<img src="img/progres-ready.png" alt="">';
+                                d.querySelector(".quiz-last__done span").classList.add('active');
                             }, 5000);
                             setTimeout(function () {
                                 d.querySelector(".quiz-last__img").classList.add('active');
