@@ -75,15 +75,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
                 quizFieldset[btnIndex].classList.add('tryHide');
+                quizFieldset[btnIndex + 2].classList.add('tryHide');
                 setTimeout(function () {
                     quizFieldset[btnIndex].classList.remove('tryHide');
+                    setTimeout(function () {
+                        quizFieldset[btnIndex + 2].classList.remove('tryHide');
+                    }, 800);
                     quizFieldset[btnIndex].classList.remove('active');
 
                     quizFieldset[btnIndex + 1].classList.add('active');
                     quizQuestNumber.innerHTML = btnIndex + 2;
                     lineProcenter();
                 }, 500);
-                
+
             }, 500);
         });
     });
@@ -150,8 +154,12 @@ document.addEventListener("DOMContentLoaded", function () {
                             }, 5000);
                         }
                         quizFieldset[fieldsetIndex].classList.add('tryHide');
+                        quizFieldset[fieldsetIndex + 2].classList.add('tryHide');
                         setTimeout(function () {
                             quizFieldset[fieldsetIndex].classList.remove('tryHide');
+                            setTimeout(function () {
+                                quizFieldset[fieldsetIndex + 2].classList.remove('tryHide');
+                            }, 800);
                             quizFieldset[fieldsetIndex].classList.remove('active');
 
                             quizFieldset[fieldsetIndex + 1].classList.add('active');

@@ -931,6 +931,9 @@
       visibility: visible;
       & + .quiz__fieldset {
         border: 2px solid #F2F2F2;
+        &.tryHide {
+          opacity: 0;
+        }
       }
     }
     &.tryHide {
