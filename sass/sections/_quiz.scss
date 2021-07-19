@@ -816,6 +816,7 @@
       top: 0;
       left: 0;
       background: url('../img/front-page/quiz/quiz-line.png');
+      background-size: 1.9270833333333335VW;
       animation: moveIt 1.5s infinite linear;
     }
   }
@@ -1418,6 +1419,7 @@
     font-size: 1.04166666667vw;
     line-height: 130%;
     background: #E6F7FF url('../img/front-page/quiz/quiz-prize.png') center bottom no-repeat;
+    background-size: 100%;
     span {
       width: 1.30208333333vw;
       height: 1.30208333333vw;

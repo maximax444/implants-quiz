@@ -147,3 +147,15 @@
     }
 }
     
+@media(min-width: 1200px) {
+    
+    @keyframes moveIt{
+        from{
+            background-position: 0 center
+        }
+            
+        to{
+            background-position: 1.9270833333333335VW center
+        }
+    }
+}
