@@ -173,9 +173,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: rotateInstallment 5s infinite linear;
+        animation: rotateInstallment 12s infinite linear;
         span {
-            animation: rotateInstallmentBack 5s infinite linear;
+            animation: rotateInstallmentBack 12s infinite linear;
             width: 62px;
             height: 62px;
             border-radius: 50%;

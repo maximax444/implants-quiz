@@ -33,6 +33,7 @@
 }
 .btn--accent{
     overflow: hidden;
+    transition: all 0.2s;
     &:before{
         content: "";
         top: -50%;
