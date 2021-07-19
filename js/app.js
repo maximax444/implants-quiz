@@ -219,8 +219,8 @@ document.addEventListener("DOMContentLoaded", function () {
 				if (xhr.status == 200) {
 					form.reset();
 					d.querySelector('body').classList.remove('stop');
-					d.querySelector('.modal').classList.remove('modal--active');
-					d.querySelector('.modal-window--active').classList.remove('modal-window--active');
+					d.querySelector('.modal').classList.add('modal--active');
+					d.querySelector('.modal .modal-window--thx').classList.add('modal-window--active');
 				}
 			}
 		};

@@ -227,6 +227,7 @@
 }
 .quiz-wrap1 {
   &__img {
+    display: block;
     height: 170px;
     max-width: 320px;
     border: 1px solid #F2F2F2;
@@ -667,8 +668,15 @@
         height: 84px;
       }
     }
+    .btn-wrap {
+      max-width: 48%;
+      a {
+        max-width: 100%;
+      }
+    }
     &-double {
       justify-content: space-between;
+      align-items: flex-start;
     }
   }
   .quiz__fieldset-last.active {

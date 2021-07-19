@@ -1,4 +1,39 @@
-
+/* Стили анимации кручения */
+@keyframes rotateInstallment {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Стили анимации кручения */
+@keyframes rotateInstallmentBack {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+/* Стили анимации линии */
+@keyframes line {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 235px;
+    }
+    100% {
+        height: 235px;
+    }
+}
 /* Стили анимации пульсации кругов */
 @keyframes pulse {
     0% {

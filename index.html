@@ -63,7 +63,10 @@
 					за 15 минут без боли <br class="mobbr"> и отёков <span><b>с пожизненной</b> <b>гарантией</b></span>
 				</h1>
 				<div class="first-screen__subtitle">
-					<img src="img/front-page/first-screen/euro.png" alt="">
+					<picture class="first-screen__hero-picture">
+						<source srcset="img/front-page/first-screen/euro.webp" type="image/webp">
+						<img src="img/front-page/first-screen/euro.png" alt="Euro">
+					</picture>
 					<span>По европейской технологии “День в день”</span>
 				</div>
 				<div class="first-screen__features">
@@ -77,15 +80,30 @@
 						<p>Рассчитайте стоимость установки имплантов
 							<b>в 3-х ценовых категориях: <br> ”Доступный”, “Стандарт” <br class="mobbr"> и “Премиум”</b>
 						</p>
-						<a class="btn btn--full first-screen__price-btn" href="#quiz">Узнать стоимость</a>
+						<div class="btn-wrap">
+							<a class="btn btn--full btn--accent first-screen__price-btn" href="#quiz">Узнать
+								стоимость</a>
+						</div>
+
 					</div>
 					<div class="first-screen__prize">
 						<div class="first-screen__prize-title"><b>Получите подарок <br> от клиники</b> после расчета
 							стоимости на нашем сайте</div>
-						<div class="first-screen__prize-block"><img src="img/front-page/first-screen/prize1.png"
-								alt=""><span>Комплексная чистка зубов Airflow</span></div>
-						<div class="first-screen__prize-block"><img src="img/front-page/first-screen/prize2.png"
-								alt=""><span>Установка 2х пломб</span></div>
+						<div class="first-screen__prize-block">
+							<picture>
+								<source srcset="img/front-page/first-screen/prize1.webp" type="image/webp">
+								<img src="img/front-page/first-screen/prize1.png"
+									alt="Комплексная чистка зубов Airflow">
+							</picture>
+							<span>Комплексная чистка зубов Airflow</span>
+						</div>
+						<div class="first-screen__prize-block">
+							<picture>
+								<source srcset="img/front-page/first-screen/prize2.webp" type="image/webp">
+								<img src="img/front-page/first-screen/prize2.png" alt="Установка 2х пломб">
+							</picture>
+							<span>Установка 2х пломб</span>
+						</div>
 					</div>
 
 				</div>
@@ -94,7 +112,10 @@
 					<span>Смотреть наши лицензии</span>
 				</a>
 				<div class="first-screen__man">
-					<img src="img/front-page/first-screen/man.png" alt="">
+					<picture>
+						<source srcset="img/front-page/first-screen/man.webp" type="image/webp">
+						<img src="img/front-page/first-screen/man.png" alt="Хирург имплантолог">
+					</picture>
 					<div class="first-screen__man-info"><span>Хирург имплантолог</span>Кандидант медицинских наук</div>
 					<div class="first-screen__man-installment"><span>0%</span></div>
 				</div>
@@ -141,33 +162,41 @@
 										<label>
 											<input class="quiz-wrapper-input" type="checkbox" name="На верхней челюсти"
 												value="Да">
-											<span class="quiz-wrap2__img"><img src="img/front-page/quiz/quiz1-1.png"
-													alt="">
-											</span>
+											<picture class="quiz-wrap2__img">
+												<source srcset="img/front-page/quiz/quiz1-1.webp" type="image/webp">
+												<img src="img/front-page/quiz/quiz1-1.png" alt="На верхней челюсти">
+											</picture>
 											<span class="quiz-wrap2__text">На верхней челюсти</span>
 										</label>
 
 										<label>
 											<input class="quiz-wrapper-input" type="checkbox" name="На нижней челюсти"
 												value="Да">
-											<span class="quiz-wrap2__img"><img src="img/front-page/quiz/quiz1-2.png"
-													alt="">
-											</span>
+											<picture class="quiz-wrap2__img">
+												<source srcset="img/front-page/quiz/quiz1-2.webp" type="image/webp">
+												<img src="img/front-page/quiz/quiz1-2.png" alt="На нижней челюсти">
+											</picture>
 											<span class="quiz-wrap2__text">На нижней челюсти</span>
 										</label>
 
 										<label>
 											<input class="quiz-wrapper-input" type="radio" name="Консультация"
 												value="Да">
-											<span class="quiz-wrap2__img"><img src="img/front-page/quiz/quiz1-3.png"
-													alt="">
-											</span>
+											<picture class="quiz-wrap2__img">
+												<source srcset="img/front-page/quiz/quiz1-3.webp" type="image/webp">
+												<img src="img/front-page/quiz/quiz1-3.png" alt="Пока не знаю,
+													нужна консультация">
+											</picture>
+
 											<span class="quiz-wrap2__text">Пока не знаю,
 												нужна консультация</span>
 										</label>
 									</div>
 									<div class="quiz__bottom">
-										<a href="" class="btn btn--full quiz__btn quiz__btn-next">Следующий шаг</a>
+										<div class="btn-wrap">
+											<a class="btn btn--full btn--accent quiz__btn quiz__btn-next"
+												href="">Следующий шаг</a>
+										</div>
 									</div>
 									<a class="quiz-polit btn--modal btn--modal-privacy" href="">Политика
 										конфиденциальности</a>
@@ -192,9 +221,10 @@
 								<div class="quiz-main">
 
 									<div class="quiz-wrap quiz-wrap1">
-										<div class="quiz-wrap1__img">
-											<img src="img/front-page/quiz/quiz1.png" alt="">
-										</div>
+										<picture class="quiz-wrap1__img">
+											<source srcset="img/front-page/quiz/quiz1.webp" type="image/webp">
+											<img src="img/front-page/quiz/quiz1.png" alt="Сколько зубов отсутствует">
+										</picture>
 										<div class="quiz-wrap1__main">
 
 											<label>
@@ -233,7 +263,10 @@
 									<div class="quiz__bottom quiz__bottom-double">
 										<a href="" class="btn quiz__btn quiz__btn-prev"><img
 												src="img/front-page/quiz/quiz-prev.svg" alt=""></a>
-										<a href="" class="btn btn--full quiz__btn quiz__btn-next">Следующий шаг</a>
+										<div class="btn-wrap">
+											<a class="btn btn--full btn--accent quiz__btn quiz__btn-next"
+												href="">Следующий шаг</a>
+										</div>
 									</div>
 									<a class="quiz-polit btn--modal btn--modal-privacy" href="">Политика
 										конфиденциальности</a>
@@ -259,9 +292,10 @@
 								<div class="quiz-main">
 
 									<div class="quiz-wrap quiz-wrap1">
-										<div class="quiz-wrap1__img">
-											<img src="img/front-page/quiz/quiz2.png" alt="">
-										</div>
+										<picture class="quiz-wrap1__img">
+											<source srcset="img/front-page/quiz/quiz2.webp" type="image/webp">
+											<img src="img/front-page/quiz/quiz2.png" alt="Как долго отсутствуют зубы">
+										</picture>
 										<div class="quiz-wrap1__main">
 											<label>
 												<input class="quiz-wrapper-input" type="radio" name="Как долго"
@@ -299,7 +333,10 @@
 									<div class="quiz__bottom quiz__bottom-double">
 										<a href="" class="btn quiz__btn quiz__btn-prev"><img
 												src="img/front-page/quiz/quiz-prev.svg" alt=""></a>
-										<a href="" class="btn btn--full quiz__btn quiz__btn-next">Следующий шаг</a>
+										<div class="btn-wrap">
+											<a class="btn btn--full btn--accent quiz__btn quiz__btn-next"
+												href="">Следующий шаг</a>
+										</div>
 									</div>
 									<a class="quiz-polit btn--modal btn--modal-privacy" href="">Политика
 										конфиденциальности</a>
@@ -324,9 +361,11 @@
 								<div class="quiz-main">
 
 									<div class="quiz-wrap quiz-wrap1">
-										<div class="quiz-wrap1__img">
-											<img src="img/front-page/quiz/quiz3.png" alt="">
-										</div>
+										<picture class="quiz-wrap1__img">
+											<source srcset="img/front-page/quiz/quiz3.webp" type="image/webp">
+											<img src="img/front-page/quiz/quiz3.png"
+												alt="Программы рассрочки и кредитования">
+										</picture>
 										<div class="quiz-wrap1__main">
 											<label>
 												<input class="quiz-wrapper-input" type="radio" name="Оплата"
@@ -371,7 +410,10 @@
 									<div class="quiz__bottom quiz__bottom-double">
 										<a href="" class="btn quiz__btn quiz__btn-prev"><img
 												src="img/front-page/quiz/quiz-prev.svg" alt=""></a>
-										<a href="" class="btn btn--full quiz__btn quiz__btn-next">Следующий шаг</a>
+										<div class="btn-wrap">
+											<a class="btn btn--full btn--accent quiz__btn quiz__btn-next"
+												href="">Следующий шаг</a>
+										</div>
 									</div>
 									<a class="quiz-polit btn--modal btn--modal-privacy" href="">Политика
 										конфиденциальности</a>
@@ -383,7 +425,7 @@
 								</div>
 							</div>
 
-						</fieldset> 
+						</fieldset>
 
 						<!-- Вопрос 5 -->
 						<fieldset class="quiz__fieldset">
@@ -398,9 +440,11 @@
 								<div class="quiz-main">
 
 									<div class="quiz-wrap quiz-wrap1">
-										<div class="quiz-wrap1__img">
-											<img src="img/front-page/quiz/quiz4.png" alt="">
-										</div>
+										<picture class="quiz-wrap1__img">
+											<source srcset="img/front-page/quiz/quiz4.webp" type="image/webp">
+											<img src="img/front-page/quiz/quiz4.png"
+												alt="Государство предоставляет налоговый вычет">
+										</picture>
 										<div class="quiz-wrap1__main">
 											<label>
 												<input class="quiz-wrapper-input" type="radio" name="Вычет"
@@ -438,7 +482,10 @@
 									<div class="quiz__bottom quiz__bottom-double">
 										<a href="" class="btn quiz__btn quiz__btn-prev"><img
 												src="img/front-page/quiz/quiz-prev.svg" alt=""></a>
-										<a href="" class="btn btn--full quiz__btn quiz__btn-next">Следующий шаг</a>
+										<div class="btn-wrap">
+											<a class="btn btn--full btn--accent quiz__btn quiz__btn-next"
+												href="">Следующий шаг</a>
+										</div>
 									</div>
 									<a class="quiz-polit btn--modal btn--modal-privacy" href="">Политика
 										конфиденциальности</a>
@@ -468,7 +515,13 @@
 											<input class="quiz-wrapper-input" type="radio" name="Подарок" value="Комплексная
 												чистка зубов Airflow">
 											<span class="quiz-wrap3__img">
-												<img src="img/front-page/quiz/quiz-prize1.png" alt="">
+												<picture>
+													<source srcset="img/front-page/quiz/quiz-prize1.webp"
+														type="image/webp">
+													<img src="img/front-page/quiz/quiz-prize1.png" alt="Комплексная
+													чистка зубов Airflow">
+												</picture>
+
 												<span class="quiz__info">
 													<span class="quiz__info-top">?</span>
 													<span class="quiz__info-text">При оплате всей суммы сразу
@@ -493,7 +546,12 @@
 											<input class="quiz-wrapper-input" type="radio" name="Подарок"
 												value="Установка 2х пломб">
 											<span class="quiz-wrap3__img">
-												<img src="img/front-page/quiz/quiz-prize1.png" alt="">
+												<picture>
+													<source srcset="img/front-page/quiz/quiz-prize2.webp"
+														type="image/webp">
+													<img src="img/front-page/quiz/quiz-prize2.png"
+														alt="Установка 2х пломб">
+												</picture>
 												<span class="quiz__info">
 													<span class="quiz__info-top">?</span>
 													<span class="quiz__info-text">При оплате всей суммы сразу
@@ -521,12 +579,15 @@
 									<div class="quiz__bottom quiz__bottom-double">
 										<a href="" class="btn quiz__btn quiz__btn-prev"><img
 												src="img/front-page/quiz/quiz-prev.svg" alt=""></a>
-										<a href="" class="btn btn--full quiz__btn quiz__btn-next">Следующий шаг</a>
+										<div class="btn-wrap">
+											<a class="btn btn--full btn--accent quiz__btn quiz__btn-next"
+												href="">Следующий шаг</a>
+										</div>
 									</div>
 									<a class="quiz-polit btn--modal btn--modal-privacy" href="">Политика
 										конфиденциальности</a>
 								</div>
-								
+
 							</div>
 
 						</fieldset>
@@ -536,37 +597,54 @@
 							<div class="quiz-last__title">Мы уже приступили <br> к расчету!</div>
 							<div class="quiz-last__main">
 								<div class="quiz-wrap quiz-last__left">
-									<div class="quiz-last__left-title">Стоимость каких систем имплантов хотите получить?</div>
+									<div class="quiz-last__left-title">Стоимость каких систем имплантов хотите получить?
+									</div>
 									<label>
-										<input type="radio" name="Результат" value="Получить стоимость ВСЕХ систем имплантов">
+										<input type="radio" name="Результат"
+											value="Получить стоимость ВСЕХ систем имплантов">
 										<span class="quiz-last__circle"></span>
 										<span class="quiz-last__text">Получить стоимость ВСЕХ систем имплантов</span>
 									</label>
 									<label>
-										<input type="radio" name="Результат" value="Получить стоимость «Доступных» систем имплантов">
+										<input type="radio" name="Результат"
+											value="Получить стоимость «Доступных» систем имплантов">
 										<span class="quiz-last__circle"></span>
-										<span class="quiz-last__text">Получить стоимость <b>«Доступных»</b> систем имплантов</span>
+										<span class="quiz-last__text">Получить стоимость <b>«Доступных»</b> систем
+											имплантов</span>
 									</label>
 									<label>
-										<input type="radio" name="Результат" value="Получить стоимость «Стандартных» систем имплантов">
+										<input type="radio" name="Результат"
+											value="Получить стоимость «Стандартных» систем имплантов">
 										<span class="quiz-last__circle"></span>
-										<span class="quiz-last__text">Получить стоимость <b>«Стандартных»</b> систем имплантов</span>
+										<span class="quiz-last__text">Получить стоимость <b>«Стандартных»</b> систем
+											имплантов</span>
 									</label>
 									<label>
-										<input type="radio" name="Результат" value="Получить стоимость «Премиальных» систем имплантов">
+										<input type="radio" name="Результат"
+											value="Получить стоимость «Премиальных» систем имплантов">
 										<span class="quiz-last__circle"></span>
-										<span class="quiz-last__text">Получить стоимость <b>«Премиальных»</b> систем имплантов</span>
+										<span class="quiz-last__text">Получить стоимость <b>«Премиальных»</b> систем
+											имплантов</span>
 									</label>
 								</div>
 								<div class="quiz-last__prize">
 									<div class="quiz-last__prize-img">
 										<div class="quiz-last__prize-before">
-											<img src="img/front-page/quiz/quiz-last-prize.png" alt=""> Ваш подарок:
+											<picture>
+												<source srcset="img/front-page/quiz/quiz-last-prize.webp"
+													type="image/webp">
+												<img src="img/front-page/quiz/quiz-last-prize.png" alt="Ваш подарок">
+											</picture>
+											Ваш подарок:
 										</div>
-										<div class="quiz-last__prize-wrap"><img src="img/front-page/quiz/quiz-prize1.png" alt=""></div>
+										<picture class="quiz-last__prize-wrap">
+											<source srcset="img/front-page/quiz/quiz-prize1.webp" type="image/webp">
+											<img src="img/front-page/quiz/quiz-prize1.png" alt="Ваш подарок">
+										</picture>
+
 									</div>
 									<div class="quiz-last__prize-text"><span>Комплексная
-										чистка зубов Airflow</span>Подарок будет забронирован
+											чистка зубов Airflow</span>Подарок будет забронирован
 										за вашим номером</div>
 								</div>
 							</div>
@@ -575,7 +653,11 @@
 								<button class="btn btn--full quiz-last__btn">Получить результат</button>
 							</div>
 							<div class="quiz-last__done">
-								<img src="img/front-page/quiz/quiz-done.png" alt="">
+								<picture>
+									<source srcset="img/front-page/quiz/quiz-done.webp" type="image/webp">
+									<img src="img/front-page/quiz/quiz-done.png" alt="Ваш подарок">
+								</picture>
+
 								<span>Стоимость установки имплантов в 3-х ценовых категориях сформирована.
 									Она откроется сразу после регистрации</span>
 							</div>
@@ -605,7 +687,11 @@
 				<button class="btn btn--accent btn--full btn--modal-form" type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
 			</form>
 		</div>
-
+		<div class="modal-window modal-window--thx">
+			<h3 class="modal-window__title modal-window--thx__title">Заявка отправленна</h3>
+			<p class="modal-window__descr modal-window--thx__descr">В ближайшее время с вами свяжется главный специалист клиники по имплантации и
+				расскажет про варианты стоимости установки импланта и протезирования!</p>
+		</div>
 		<div class="modal-window modal-window--privacy">
 			<h3 class="modal-window__title">Политика конфиденциальности</h3>
 			<p class="modal-window__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex ab voluptas

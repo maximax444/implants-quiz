@@ -173,7 +173,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        animation: rotateInstallment 5s infinite linear;
         span {
+            animation: rotateInstallmentBack 5s infinite linear;
             width: 62px;
             height: 62px;
             border-radius: 50%;
@@ -297,8 +299,8 @@
             width: 82px;
             height: 117px;
             z-index: 2;
-            background: url('../img/front-page/first-screen/arrow.png') center no-repeat;
-            background-size: contain;
+            background: url('../img/front-page/first-screen/arrow.png') center top no-repeat;
+            animation: line 3s infinite linear;
         }
     }
     .first-screen__price {
