@@ -586,10 +586,10 @@
       font-size: 11px;
       line-height: 15px;
       color: #000000;
-      max-width: 176px;
-      display: none;
+      transition: all 0.3s;
+      opacity: 0;
       &.active {
-        display: block;
+        opacity: 1;
       }
     }
   }
