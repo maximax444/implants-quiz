@@ -126,6 +126,7 @@
   border-radius: 8px;
   transition: all 0.9s;
   background-color: #fff;
+  
   &.active{
     opacity: 1;
     position: relative;
@@ -152,6 +153,9 @@
       transition: all 0.9s;
       
     }
+  }
+  &.tryHide {
+    opacity: 0;
   }
 }
 .quiz-last__done-progres {
@@ -928,6 +932,9 @@
       & + .quiz__fieldset {
         border: 2px solid #F2F2F2;
       }
+    }
+    &.tryHide {
+      opacity: 0;
     }
   }
   .quiz-prize {

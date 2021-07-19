@@ -60,22 +60,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
         btn.addEventListener("click", event => {
             event.preventDefault();
-            if (btnIndex == 5) {
-                d.querySelector(".quiz-top").classList.add('hide');
-                d.querySelector(".quiz-last__prize-wrap").innerHTML = d.querySelector(".quiz-main6 input:checked").nextElementSibling.querySelector('picture').innerHTML;
-                d.querySelector(".quiz-last__prize-text span").innerHTML = d.querySelector(".quiz-main6 input:checked").nextElementSibling.nextElementSibling.querySelector('.quiz-wrap3__name').innerHTML;
-                d.querySelector(".quiz-last__done-progres").classList.add('active');
-                counter(49, '.quiz-last__done-progres .inner b');
+            setTimeout(function () {
+                if (btnIndex == 5) {
+                    d.querySelector(".quiz-top").classList.add('hide');
+                    d.querySelector(".quiz-last__prize-wrap").innerHTML = d.querySelector(".quiz-main6 input:checked").nextElementSibling.querySelector('picture').innerHTML;
+                    d.querySelector(".quiz-last__prize-text span").innerHTML = d.querySelector(".quiz-main6 input:checked").nextElementSibling.nextElementSibling.querySelector('.quiz-wrap3__name').innerHTML;
+                    d.querySelector(".quiz-last__done-progres").classList.add('active');
+                    counter(49, '.quiz-last__done-progres .inner b');
+                    setTimeout(function () {
+                        d.querySelector(".quiz-last__done-progres .inner").innerHTML = '<img src="img/progres-ready.png" alt="">';
+                    }, 5000);
+
+
+                }
+
+                quizFieldset[btnIndex].classList.add('tryHide');
                 setTimeout(function () {
-                    d.querySelector(".quiz-last__done-progres .inner").innerHTML = '<img src="img/progres-ready.png" alt="">';
-                }, 5000);
+                    quizFieldset[btnIndex].classList.remove('tryHide');
+                    quizFieldset[btnIndex].classList.remove('active');
 
-
-            }
-            quizQuestNumber.innerHTML = btnIndex + 2;
-            quizFieldset[btnIndex].classList.remove('active');
-            quizFieldset[btnIndex + 1].classList.add('active');
-            lineProcenter();
+                    quizFieldset[btnIndex + 1].classList.add('active');
+                    quizQuestNumber.innerHTML = btnIndex + 2;
+                    lineProcenter();
+                }, 500);
+                
+            }, 500);
         });
     });
 
@@ -128,22 +137,29 @@ document.addEventListener("DOMContentLoaded", function () {
             if ((label.querySelector('input[type=radio]')) && (fieldsetIndex != 6)) {
                 console.log(fieldsetIndex);
                 label.addEventListener("click", event => {
-                    if (fieldsetIndex == 5) {
-                        d.querySelector(".quiz-top").classList.add('hide');
+                    setTimeout(function () {
+                        if (fieldsetIndex == 5) {
+                            d.querySelector(".quiz-top").classList.add('hide');
 
-                        d.querySelector(".quiz-last__prize-wrap").innerHTML = d.querySelector(".quiz-main6 input:checked").nextElementSibling.querySelector('picture').innerHTML;
-                        d.querySelector(".quiz-last__prize-text span").innerHTML = d.querySelector(".quiz-main6 input:checked").nextElementSibling.nextElementSibling.querySelector('.quiz-wrap3__name').innerHTML;
-                        d.querySelector(".quiz-last__done-progres").classList.add('active');
-                        counter(49, '.quiz-last__done-progres .inner b');
+                            d.querySelector(".quiz-last__prize-wrap").innerHTML = d.querySelector(".quiz-main6 input:checked").nextElementSibling.querySelector('picture').innerHTML;
+                            d.querySelector(".quiz-last__prize-text span").innerHTML = d.querySelector(".quiz-main6 input:checked").nextElementSibling.nextElementSibling.querySelector('.quiz-wrap3__name').innerHTML;
+                            d.querySelector(".quiz-last__done-progres").classList.add('active');
+                            counter(49, '.quiz-last__done-progres .inner b');
+                            setTimeout(function () {
+                                d.querySelector(".quiz-last__done-progres .inner").innerHTML = '<img src="img/progres-ready.png" alt="">';
+                            }, 5000);
+                        }
+                        quizFieldset[fieldsetIndex].classList.add('tryHide');
                         setTimeout(function () {
-                            d.querySelector(".quiz-last__done-progres .inner").innerHTML = '<img src="img/progres-ready.png" alt="">';
-                        }, 5000);
-                    }
-                    quizFieldset[fieldsetIndex].classList.remove('active');
+                            quizFieldset[fieldsetIndex].classList.remove('tryHide');
+                            quizFieldset[fieldsetIndex].classList.remove('active');
 
-                    quizFieldset[fieldsetIndex + 1].classList.add('active');
-                    quizQuestNumber.innerHTML = fieldsetIndex + 2;
-                    lineProcenter();
+                            quizFieldset[fieldsetIndex + 1].classList.add('active');
+                            quizQuestNumber.innerHTML = fieldsetIndex + 2;
+                            lineProcenter();
+                        }, 500);
+                    }, 500);
+
                 });
             }
 

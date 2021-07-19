@@ -17,6 +17,7 @@
 
 .btn-wrap {
     position: relative;
+    z-index: 1;
     &::after {
         content: "";
         display: block;
