@@ -233,13 +233,13 @@
         }
     }
 }
-@media(min-width:576px) {
+@media(min-width: 576px) {
     .first-screen__man {
         width: 350px;
         margin: 0 auto;
     }
 }
-@media(min-width:768px) {
+@media(min-width: 768px) {
     .first-screen {
         padding-top: 120px;
         &__title {
@@ -323,7 +323,7 @@
         width: 350px;
     }
 }
-@media(min-width:1200px) {
+@media(min-width: 1200px) {
     .first-screen {
         padding-top: 160px;
         padding-bottom: 215px;
@@ -392,6 +392,12 @@
         .btn-wrap {
             max-width: 300px;
             margin: 0 auto;
+        }
+        &::before {
+            bottom: 22px;
+            right: 25px;
+            width: 120px;
+            height: 49px;
         }
     }
     .first-screen__man {
