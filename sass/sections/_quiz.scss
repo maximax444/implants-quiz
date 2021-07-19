@@ -1518,6 +1518,10 @@
       bottom: 2.60416666667vw;
       left: -6.25VW;
       pointer-events: none;
+      display: none;
+      &.active {
+        display: block;
+      }
     }
     &__bottom {
       display: flex;

@@ -70,16 +70,24 @@ document.addEventListener("DOMContentLoaded", function () {
                     setTimeout(function () {
                         d.querySelector(".quiz-last__done-progres .inner").innerHTML = '<img src="img/progres-ready.png" alt="">';
                     }, 5000);
-
+                    setTimeout(function () {
+                        d.querySelector(".quiz-last__img").classList.add('active');
+                    }, 1500);
 
                 }
 
                 quizFieldset[btnIndex].classList.add('tryHide');
-                quizFieldset[btnIndex + 2].classList.add('tryHide');
+                if (quizFieldset[btnIndex + 2]) {
+                    quizFieldset[btnIndex + 2].classList.add('tryHide');
+                }
+
                 setTimeout(function () {
                     quizFieldset[btnIndex].classList.remove('tryHide');
                     setTimeout(function () {
-                        quizFieldset[btnIndex + 2].classList.remove('tryHide');
+                        if (quizFieldset[btnIndex + 2]) {
+                            quizFieldset[btnIndex + 2].classList.remove('tryHide');
+                        }
+
                     }, 800);
                     quizFieldset[btnIndex].classList.remove('active');
 
@@ -152,13 +160,22 @@ document.addEventListener("DOMContentLoaded", function () {
                             setTimeout(function () {
                                 d.querySelector(".quiz-last__done-progres .inner").innerHTML = '<img src="img/progres-ready.png" alt="">';
                             }, 5000);
+                            setTimeout(function () {
+                                d.querySelector(".quiz-last__img").classList.add('active');
+                            }, 1500);
                         }
                         quizFieldset[fieldsetIndex].classList.add('tryHide');
-                        quizFieldset[fieldsetIndex + 2].classList.add('tryHide');
+                        if (quizFieldset[fieldsetIndex + 2]) {
+                            quizFieldset[fieldsetIndex + 2].classList.add('tryHide');
+                        }
+
                         setTimeout(function () {
                             quizFieldset[fieldsetIndex].classList.remove('tryHide');
                             setTimeout(function () {
-                                quizFieldset[fieldsetIndex + 2].classList.remove('tryHide');
+                                if (quizFieldset[fieldsetIndex + 2]) {
+                                    quizFieldset[fieldsetIndex + 2].classList.remove('tryHide');
+                                }
+
                             }, 800);
                             quizFieldset[fieldsetIndex].classList.remove('active');
 
